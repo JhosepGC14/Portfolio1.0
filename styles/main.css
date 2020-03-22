@@ -1,0 +1,465 @@
+/* Variables Globales */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+}
+ul {
+  position: fixed;
+  right: 10px;
+}
+.wrap {
+  overflow: hidden;
+}
+ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+h4 {
+  position: relative;
+  left: 104px;
+}
+
+/* progress {
+  width: 100%;
+  background-color: #f3f3f3;
+  border: 0;
+  border-radius: 9px;
+} */
+
+progress {
+  background-color: #f3f3f345;
+  border: 1px;
+  height: 25px;
+  width: 300px;
+  border-radius: 10px;
+  color: #000000;
+  
+}
+/* Safari Chrome */
+progress::-webkit-progress-bar {
+  background-color: #f3f3f345;
+  border-radius: 9px;
+}
+progress::-webkit-progress-value {
+  background: #007bff;
+  border-radius: 9px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+/* firefox */
+progress::-moz-progress-bar {
+  background: #007bff;
+  border-radius: 9px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+
+
+/*Variables por Class*/
+.twitter {
+  margin-top: 3px;
+  margin-right: 10px;
+}
+
+.facebook {
+  margin-right: 10px;
+}
+
+.imagen1 {
+  background-image: url("/images/image.png") no repeat center;
+  display: block;
+  margin: 0px;
+  min-width: 100vw;
+  min-height: 100vh;
+  left: 0px;
+  top: 0px;
+}
+
+.titulo1 {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 26px;
+  font-size: 60px;
+}
+
+.nombre1 {
+  border-radius: 10px 25px;
+  text-align: initial;
+  position: absolute;
+  padding: 15px;
+  left: 18%;
+  top: 60%;
+  font-size: 30px;
+  color: white;
+  background: rgba(114, 153, 254, 0.5);
+}
+
+.banner2 {
+  width: 100%;
+  padding: 20px;
+  background-color: #7299fe;
+}
+
+.service {
+  padding: 20px 0px 0px 0px;
+  background-color: #fb7171;
+  height: 100%;
+  width: 100%;
+}
+
+.portafolio {
+  background-color: #ffd233;
+  height: 100%;
+  width: 100%;
+}
+
+.portafolio h2 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  padding: 10px 0px 40px 0px;
+}
+
+.contacto {
+  background-color: #16a085;
+  height: auto;
+  width: 100%;
+  padding-bottom: 100px;
+}
+
+.contacto h2 {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.container__contact {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+  margin: auto;
+  height: auto;
+  background: #eae9e9;
+  -webkit-box-shadow: -18px 18px 35px -7px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: -18px 18px 35px -7px rgba(0, 0, 0, 0.58);
+  box-shadow: -18px 18px 35px -7px rgba(0, 0, 0, 0.58);
+  border-radius: 5px;
+}
+
+.contact__input {
+  width: 60%;
+  height: auto;
+  margin: 40px 40px 40px 0px;
+  background: #ffffff;
+  border-radius: 0px 0px 40px 0px;
+  padding: 40px;
+}
+
+.contact__input button {
+  margin: auto;
+  display: block;
+  width: 200px;
+  height: 50px;
+  border-style: none;
+  border-radius: 10px;
+  background: #ff9800;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.contact__input button:hover {
+  background: #16a085;
+}
+
+.contact__input button:focus {
+  box-shadow: 0 0 0 0.2rem orange;
+  border-style: none;
+  outline: 0;
+}
+
+.contact__input button:active {
+  box-shadow: 0 0 0 0.2rem #ff9800;
+  border-style: none;
+}
+
+.contact__input label {
+  color: #5d5d5d;
+  font-weight: normal;
+  font-style: normal;
+  padding-bottom: 5px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 0.5;
+  font-family: "Roboto";
+  font-size: 15px; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
+  opacity: 0.5;
+}
+
+.contact__input input {
+  border-style: none;
+  font-size: 15px;
+}
+
+.contact__input input:focus {
+  outline: 0;
+}
+
+.input__info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #80808094;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.input__info textarea {
+  border-style: none;
+  outline: 0;
+}
+
+.contact__info {
+  text-align: center;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ff9800;
+  font-style: normal;
+  margin: 40px 0px 40px 40px;
+  border-radius: 40px 0px 0px 0px;
+}
+
+.contact__info h3 {
+  font-size: 30px;
+}
+
+.titleservicio {
+  margin: 0px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+
+.disenotext {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.verctorservicios {
+  position: absolute;
+  left: 1.56%;
+  right: 1.56%;
+  top: 1.56%;
+  bottom: 1.56%;
+}
+
+.desarrollotext {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.mobiletext {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.uitext {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.uxtext {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.metodtext {
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.blockdiseno {
+  width: 33.3%;
+  display: block;
+  text-align: center;
+}
+
+.blockdesarrollo {
+  width: 33.3%;
+  display: block;
+  text-align: center;
+}
+
+.blockmobile {
+  width: 33.3%;
+  display: block;
+  text-align: center;
+}
+
+.blockui {
+  width: 33.3%;
+  display: block;
+  text-align: center;
+}
+
+.blockux {
+  width: 33.3%;
+  display: block;
+  text-align: center;
+}
+
+.blockmetagi {
+  width: 33.3%;
+  display: block;
+  text-align: center;
+}
+
+.vectorservicios {
+  display: block;
+  margin: auto;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 70%;
+  margin: auto;
+  padding: 50px 0px 50px 0px;
+  justify-content: center;
+}
+
+.contenskill {
+  margin: auto;
+  width: 750px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.contenskilltext:nth-child(2n + 1) {
+  padding-right: 15px;
+}
+
+.contenskilltext:nth-child(2n) {
+  padding-left: 15px;
+}
+
+.contenportafolio {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+}
+
+.contenportafolio figure img{
+  border-radius: 10px;
+}
+
+.imagenportafolio {
+  margin: 50px;
+  display: block;
+  text-align: center;
+}
+
+.clientes {
+  background-color: #3f4e62;
+  height: 100%;
+  width: 100%;
+}
+
+.clientes h2 {
+  padding: 10px 0px 40px 0px;
+}
+
+.container__client {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 70%;
+  margin: auto;
+  padding: 50px 0px 50px 0px;
+  justify-content: center;
+}
+
+.container__client figure {
+  margin: 0px 0px 2rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__client figure img{
+  border-radius: 10px;
+}

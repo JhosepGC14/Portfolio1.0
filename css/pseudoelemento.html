@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>..::PSEUDOELEMENTO::..</title>
+    <style>
+        /* h1::after{
+            color: red;
+            border: 3px solid red;
+            content: " After";
+        }
+        h1::before{
+            content: "Before ";
+            border: 5px solid blue;
+            color: seagreen;
+
+        } */
+        h1::first-letter {
+            font-size: 48px;
+        }
+        h1::first-letter::selection{
+            background: red;
+        }
+        p::first-line{
+            font-size: 50px;
+        }
+        *::selection{
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TITULO</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet libero perspiciatis saepe illum quisquam! Modi
+        aspernatur rerum vel. Inventore suscipit optio repudiandae, quibusdam odio tenetur? Ullam animi temporibus
+        cumque ut.</p>
+</body>
+
+</html>
