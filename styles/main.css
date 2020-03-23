@@ -12,6 +12,7 @@ body {
 ul {
   position: fixed;
   right: 10px;
+  z-index: 1;
 }
 .wrap {
   overflow: hidden;
@@ -32,21 +33,18 @@ h4 {
   left: 104px;
 }
 
-/* progress {
-  width: 100%;
-  background-color: #f3f3f3;
-  border: 0;
-  border-radius: 9px;
-} */
+.landing {
+  margin: 0px;
+  position: relative;
+}
 
 progress {
   background-color: #f3f3f345;
   border: 1px;
   height: 25px;
-  width: 300px;
+  width: 100%;
   border-radius: 10px;
   color: #000000;
-  
 }
 /* Safari Chrome */
 progress::-webkit-progress-bar {
@@ -85,7 +83,6 @@ progress::-moz-progress-bar {
   background-size: 1rem 1rem;
 }
 
-
 /*Variables por Class*/
 .twitter {
   margin-top: 3px;
@@ -97,11 +94,10 @@ progress::-moz-progress-bar {
 }
 
 .imagen1 {
-  background-image: url("/images/image.png") no repeat center;
+  /* background-image: url('./images/image.png') no repeat center; */
   display: block;
   margin: 0px;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100%;
   left: 0px;
   top: 0px;
 }
@@ -116,11 +112,10 @@ progress::-moz-progress-bar {
 
 .nombre1 {
   border-radius: 10px 25px;
-  text-align: initial;
   position: absolute;
   padding: 15px;
-  left: 18%;
-  top: 60%;
+  left: 5%;
+  bottom: 0%;
   font-size: 30px;
   color: white;
   background: rgba(114, 153, 254, 0.5);
@@ -352,36 +347,6 @@ progress::-moz-progress-bar {
   text-align: center;
 }
 
-.blockdesarrollo {
-  width: 33.3%;
-  display: block;
-  text-align: center;
-}
-
-.blockmobile {
-  width: 33.3%;
-  display: block;
-  text-align: center;
-}
-
-.blockui {
-  width: 33.3%;
-  display: block;
-  text-align: center;
-}
-
-.blockux {
-  width: 33.3%;
-  display: block;
-  text-align: center;
-}
-
-.blockmetagi {
-  width: 33.3%;
-  display: block;
-  text-align: center;
-}
-
 .vectorservicios {
   display: block;
   margin: auto;
@@ -399,10 +364,15 @@ progress::-moz-progress-bar {
 
 .contenskill {
   margin: auto;
-  width: 750px;
+  width: 60%;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 50px;
+  text-align: center;
+}
+
+.contenskilltext {
+  width: 50%;
 }
 
 .contenskilltext:nth-child(2n + 1) {
@@ -422,7 +392,7 @@ progress::-moz-progress-bar {
   justify-content: center;
 }
 
-.contenportafolio figure img{
+.contenportafolio figure img {
   border-radius: 10px;
 }
 
@@ -460,6 +430,162 @@ progress::-moz-progress-bar {
   align-items: center;
 }
 
-.container__client figure img{
+.container__client figure img {
   border-radius: 10px;
+}
+
+/*RESPONSIVE DESIGN*/
+/* Móviles: entre 320 y 480 píxeles.
+Tablets: entre 768 y 1024 píxeles.
+Pantallas grandes: más de 1200 píxeles. */
+
+
+/* Tablets: entre 768 y 1024 píxeles. */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .titulo1 {
+    font-size: 40px;
+  }
+  .nombre1 {
+    left: 30%;
+    bottom: 5%;
+    right: 30%;
+    font-size: 20px;
+  }
+
+  /*SKILLS */
+  .contenskill {
+    flex-direction: column;
+  }
+
+  .contenskilltext {
+    margin: auto;
+    display: block;
+    width: 80%;
+  }
+
+  .contenskilltext:nth-child(2n) {
+    padding: 0;
+  }
+
+  .contenskilltext:nth-child(2n + 1) {
+    padding: 0;
+  }
+
+  /*SERVICIOS*/
+  .blockdiseno {
+    width: 50%;
+  }
+
+  /*CONTACTO*/
+  .container__contact {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .contact__info {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .contact__info h3 {
+    font-size: 22px;
+  }
+
+  .contact__info p {
+    margin-top: 0px;
+  }
+
+  .contact__info strong {
+    margin-bottom: 20px;
+  }
+  .contact__input {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Móviles: entre 320 y 480 píxeles.*/
+@media only screen and (min-width: 320px) and (max-width: 480px){
+  .titulo1 {
+    top: 63%;
+    font-size: 22px;
+    text-align: initial;
+    bottom: 1%;
+    left: 10%;
+  }
+  .nombre1 {
+    left: 50%;
+    right: 5%;
+    bottom: 0%;
+    font-size: 10px;
+    border-radius: 5px 14px;
+  }
+
+  /*SKILLS*/
+  .contenskill {
+    flex-direction: column;
+  }
+
+  .contenskilltext {
+    margin: auto;
+    display: block;
+    width: 80%;
+  }
+
+  .contenskilltext:nth-child(2n) {
+    padding: 0;
+  }
+
+  .contenskilltext:nth-child(2n + 1) {
+    padding: 0;
+  }
+
+  /*SERVICIOS*/
+  .blockdiseno {
+    width: 100%;
+  }
+
+
+  /* CUSTOMERS*/
+  .container__client{
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .container__client figure{
+    width: 100%;
+  }
+
+  /*CONTACTO*/
+  .contacto{
+    padding: 20px 20px 100px 20px;
+  }
+  .container__contact {
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .contact__info {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .contact__info h3 {
+    font-size: 18px;
+  }
+
+  .contact__info p {
+    margin-top: 0px;
+  }
+
+  .contact__info strong {
+    margin-bottom: 20px;
+  }
+  .contact__input {
+    margin: 0;
+    width: 100%;
+  }
+
 }
